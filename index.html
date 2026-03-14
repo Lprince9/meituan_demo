@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大学城美食地图</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">CF</div>
+        <div>
+          <p class="eyebrow">Campus Food Map</p>
+          <h1>大学城美食地图</h1>
+        </div>
+      </div>
+
+      <nav class="nav-list" aria-label="主导航">
+        <button class="nav-item is-active" type="button" data-view="home">
+          <span class="nav-icon">01</span>
+          <span>发现页</span>
+        </button>
+        <button class="nav-item" type="button" data-view="map">
+          <span class="nav-icon">02</span>
+          <span>地图探索</span>
+        </button>
+        <button class="nav-item" type="button" data-view="detail">
+          <span class="nav-icon">03</span>
+          <span>餐厅详情</span>
+        </button>
+        <button class="nav-item" type="button" data-view="rankings">
+          <span class="nav-icon">04</span>
+          <span>榜单专题</span>
+        </button>
+        <button class="nav-item" type="button" data-view="favorites">
+          <span class="nav-icon">05</span>
+          <span>我的收藏</span>
+        </button>
+        <button class="nav-item" type="button" data-view="routes">
+          <span class="nav-icon">06</span>
+          <span>路线规划</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-card">
+        <p class="eyebrow">本周专题</p>
+        <h2>夜宵续命路线</h2>
+        <p>从图书馆到宿舍楼，给你一条适合晚自习后的轻松吃喝路线。</p>
+        <button class="button button--secondary" type="button" data-view-shortcut="routes">查看路线</button>
+      </div>
+    </aside>
+
+    <div class="main-shell">
+      <header class="topbar">
+        <div class="topbar-meta">
+          <p class="eyebrow" id="page-kicker">Campus Life</p>
+          <h2 id="page-title">今天想吃点什么？</h2>
+          <p id="page-subtitle">围绕 4 所大学的本地餐厅推荐、地图筛选和路线灵感都在这里。</p>
+        </div>
+
+        <div class="topbar-tools">
+          <label class="search-input topbar-search" aria-label="搜索餐厅">
+            <span>搜索</span>
+            <input id="global-search" type="search" placeholder="麻辣烫、咖啡、离宿舍近">
+          </label>
+          <div class="status-pills">
+            <span class="status-pill" id="current-campus-label">当前范围：整个大学城</span>
+            <span class="status-pill">演示模式</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="view-stage">
+        <section class="view is-active" id="view-home" data-view-panel="home">
+          <div id="home-content"></div>
+        </section>
+
+        <section class="view" id="view-map" data-view-panel="map">
+          <div id="map-content"></div>
+        </section>
+
+        <section class="view" id="view-detail" data-view-panel="detail">
+          <div id="detail-content"></div>
+        </section>
+
+        <section class="view" id="view-rankings" data-view-panel="rankings">
+          <div id="rankings-content"></div>
+        </section>
+
+        <section class="view" id="view-favorites" data-view-panel="favorites">
+          <div id="favorites-content"></div>
+        </section>
+
+        <section class="view" id="view-routes" data-view-panel="routes">
+          <div id="routes-content"></div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" aria-live="polite"></div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
